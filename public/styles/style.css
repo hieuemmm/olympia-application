@@ -114,6 +114,36 @@ img {
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
+.items-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.items-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.items-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.items-baseline {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+.items-initial {
+  -webkit-box-align: initial;
+  -ms-flex-align: initial;
+  align-items: initial;
+}
 /* =========================================================================== */
 /*! Position - Absolute */
 .position-relative {
@@ -146,6 +176,9 @@ img {
 .absolute-right {
   right: 0;
 }
+.absolute-left {
+  left: 0;
+}
 .absolute-bottom {
   bottom: 0;
 }
@@ -156,6 +189,9 @@ img {
 .absolute-bottom-left {
   bottom: 0;
   left: 0;
+}
+.top-43 {
+  top: 43px;
 }
 /* Line Height */
 
@@ -308,6 +344,21 @@ img {
 .line-height-30 {
   line-height: 30px;
 }
+.rounded {
+  border-radius: 5px;
+}
+.shadow {
+  --tw-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+    0 2px 4px -2px var(--tw-shadow-color);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+    var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+    var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
 /* =========================================================================== */
 /* DESKTOP CSS RULES: */
 /* Desktop - Flex */
@@ -435,6 +486,17 @@ img {
 }
 /* TABLET CSS RULES: */
 @media (max-width: 992px) {
+  .md\:display-block {
+    display: block;
+  }
+  .md\:display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .md\:display-none {
+    display: none;
+  }
   /* Tablet - Flex */
   .md\:flex-1 {
     -webkit-box-flex: 1;
@@ -562,6 +624,17 @@ img {
 }
 /* MOBILE CSS RULES: */
 @media (max-width: 768px) {
+  .sm\:display-block {
+    display: block;
+  }
+  .sm\:display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sm\:display-none {
+    display: none;
+  }
   /* Mobile - Flex */
   .sm\:flex-1 {
     -webkit-box-flex: 1;

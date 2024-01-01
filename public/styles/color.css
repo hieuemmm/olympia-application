@@ -21,6 +21,7 @@
   --color-dark-primary: rgb(103, 58, 183);
   --color-light-yellow: rgb(239, 169, 41);
   --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
   --color-red: #ef3c69;
 }
 
@@ -41,6 +42,10 @@
 .bg-primary,
 .background-color-primary {
   background-color: var(--color-primary);
+}
+.hover\:light-primary:hover,
+.hover\:.light-primary:hover {
+  background-color: var(--color-light-primary);
 }
 
 .bg-blue,
@@ -86,6 +91,10 @@
 .bg-black,
 .background-color-black {
   background-color: var(--color-black);
+}
+.bg-white,
+.background-color-white {
+  background-color: var(--color-white);
 }
 
 .bg-red,
@@ -152,10 +161,19 @@
 .text-black {
   color: var(--color-black);
 }
+.t-white,
+.text-white {
+  color: var(--color-white);
+}
 
 .t-red,
 .text-red {
   color: var(--color-red);
+}
+
+.t-transparent,
+.text-transparent {
+  color: transparent;
 }
 
 .b-gray,
@@ -216,6 +234,10 @@
 .b-black,
 .border-black {
   border: 1px solid var(--color-black);
+}
+.b-white,
+.border-white {
+  border: 1px solid var(--color-white);
 }
 
 .b-red,
@@ -282,6 +304,10 @@
 .border-top-black {
   border-top: 1px solid var(--color-black);
 }
+.bt-white,
+.border-top-white {
+  border-top: 1px solid var(--color-white);
+}
 
 .bt-red,
 .border-top-red {
@@ -346,6 +372,10 @@
 .bl-black,
 .border-left-black {
   border-left: 1px solid var(--color-black);
+}
+.bl-white,
+.border-left-white {
+  border-left: 1px solid var(--color-white);
 }
 
 .bl-red,
@@ -412,6 +442,10 @@
 .border-bottom-black {
   border-bottom: 1px solid var(--color-black);
 }
+.bb-white,
+.border-bottom-white {
+  border-bottom: 1px solid var(--color-white);
+}
 
 .bb-red,
 .border-bottom-red {
@@ -476,6 +510,10 @@
 .br-black,
 .border-right-black {
   border-right: 1px solid var(--color-black);
+}
+.br-white,
+.border-right-white {
+  border-right: 1px solid var(--color-white);
 }
 
 .br-red,
