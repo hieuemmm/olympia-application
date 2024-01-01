@@ -21,11 +21,17 @@
 /* =========================================================================== */
 /* =========================================================================== */
 /*! Reset CSS*/
+@import "./color.css"; /* Using a string */
+@import "./sizing.css"; /* Using a string */
+@import "./spacing.css"; /* Using a string */
+@import "./fontweight.css"; /* Using a string */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Quicksand&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: 'Quicksand', sans-serif;
 }
 :focus {
   outline: 0;
@@ -53,12 +59,6 @@ img {
 }
 .display-none {
   display: none;
-}
-
-.display-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .flex-column {
@@ -436,6 +436,8 @@ img {
     -ms-flex: 5;
     flex: 5;
   }
+
+  
   /* Tablet - Gap */
   .md\:gap-3 {
     gap: 3px;
