@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="h-16 flex justify-between px-3 bg-white border border-dotted border-t-0 border-l-0 border-r-0">
+    <header class="flex h-16 justify-between px-3 bg-white border border-dotted border-t-0 border-l-0 border-r-0">
         <h1 class="relative py-1 flex items-center">
             <a class="absolute top-0 left-0 right-0 bottom-0 text-transparent" href="/">Olympia Application</a>
             <div class="flex gap-4 items-center">
@@ -20,13 +20,14 @@
             </div>
         </h1>
         <nav class="flex gap-4 items-center">
-            <div class="bg-purple-100 rounded px-5 py-2.5 text-purple-700 font-semibold cursor-pointer">Chương trình của
-                tôi</div>
+            <div class="bg-purple-100 rounded px-5 py-2.5 text-purple-700 font-semibold cursor-pointer">
+                Chương trình của tôi
+            </div>
             <div class="relative">
                 <div class="flex items-center justify-center h-11 w-11 cursor-pointer bg-slate-100 rounded"><i
                         class="fa-solid fa-bars "></i>
                 </div>
-                <ul class="absolute right-0 min-w-60 py-2 rounded bg-white shadow-lg shadow-indigo-500/50">
+                <ul class="hidden absolute right-0 min-w-60 py-2 rounded bg-white shadow-lg shadow-indigo-500/50">
                     <li class="p-2">
                         <div class="text-gray-700">HieuVV4</div>
                         <div class="text-sm text-gray-400">hieus247@gmail.com</div>
@@ -44,39 +45,36 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Login</button>
-            </form>
-        </section>
-
-        <section class="flex gap-5">
-            <div class="item">
-                <div class="bg-blue-500 text-white p-4">
-                    This is a div with a blue background, white text, and padding.
+    <main class="flex justify-center m-">
+        <div class="max-w-screen-session flex flex-col gap-5 px-2 w-full">
+            <section>
+                <div class="flex justify-between px-5 py-2.5 border rounded-lg flex-wrap-reverse gap-2">
+                    <div>
+                        <p class="font-semibold">Bạn muốn tạo và tổ chức một Olympia?</p>
+                        <p>Bạn có thể bắt đầu dùng miễn phí.</p>
+                    </div>
+                    <div class="bg-purple-100 rounded px-5 py-2.5 text-purple-700 font-semibold cursor-pointer">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Tổ chức ngay</span>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="item">
-                <div class="bg-blue-500 text-white p-4">
-                    This is a div with a blue background, white text, and padding.
+            <section>
+                <div class="flex justify-between flex-wrap-reverse gap-2">
+                    <div class="flex-1">
+                        <div class="px-5 py-2.5 border rounded-lg">
+                            <p class="font-semibold">Bạn muốn tạo và tổ chức một Olympia?</p>
+                            <p>Bạn có thể bắt đầu dùng miễn phí.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-2.5 border rounded-lg">
+                        <p class="font-semibold">Bạn muốn tạo và tổ chức một Olympia?</p>
+                        <p>Bạn có thể bắt đầu dùng miễn phí.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="item">
-                <div class="bg-blue-500 text-white p-4">
-                    This is a div with a blue background, white text, and padding.
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
