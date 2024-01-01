@@ -25,13 +25,13 @@
 @import "./sizing.css"; /* Using a string */
 @import "./spacing.css"; /* Using a string */
 @import "./fontweight.css"; /* Using a string */
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 :focus {
   outline: 0;
@@ -336,6 +336,31 @@ img {
   -ms-flex: 5;
   flex: 5;
 }
+.flex-6 {
+  -webkit-box-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
+}
+.flex-7 {
+  -webkit-box-flex: 7;
+  -ms-flex: 7;
+  flex: 7;
+}
+.flex-8 {
+  -webkit-box-flex: 8;
+  -ms-flex: 8;
+  flex: 8;
+}
+.flex-9 {
+  -webkit-box-flex: 9;
+  -ms-flex: 9;
+  flex: 9;
+}
+.flex-10 {
+  -webkit-box-flex: 10;
+  -ms-flex: 10;
+  flex: 10;
+}
 /* Desktop - Gap */
 .gap-3 {
   gap: 3px;
@@ -436,8 +461,32 @@ img {
     -ms-flex: 5;
     flex: 5;
   }
+  .md\:flex-6 {
+    -webkit-box-flex: 6;
+    -ms-flex: 6;
+    flex: 6;
+  }
+  .md\:flex-7 {
+    -webkit-box-flex: 7;
+    -ms-flex: 7;
+    flex: 7;
+  }
+  .md\:flex-8 {
+    -webkit-box-flex: 8;
+    -ms-flex: 8;
+    flex: 8;
+  }
+  .md\:flex-9 {
+    -webkit-box-flex: 9;
+    -ms-flex: 9;
+    flex: 9;
+  }
+  .md\:flex-10 {
+    -webkit-box-flex: 10;
+    -ms-flex: 10;
+    flex: 10;
+  }
 
-  
   /* Tablet - Gap */
   .md\:gap-3 {
     gap: 3px;
@@ -538,6 +587,31 @@ img {
     -webkit-box-flex: 5;
     -ms-flex: 5;
     flex: 5;
+  }
+  .sm\:flex-6 {
+    -webkit-box-flex: 6;
+    -ms-flex: 6;
+    flex: 6;
+  }
+  .sm\:flex-7 {
+    -webkit-box-flex: 7;
+    -ms-flex: 7;
+    flex: 7;
+  }
+  .sm\:flex-8 {
+    -webkit-box-flex: 8;
+    -ms-flex: 8;
+    flex: 8;
+  }
+  .sm\:flex-9 {
+    -webkit-box-flex: 9;
+    -ms-flex: 9;
+    flex: 9;
+  }
+  .sm\:flex-10 {
+    -webkit-box-flex: 10;
+    -ms-flex: 10;
+    flex: 10;
   }
   /* Mobile - Gap */
   .sm\:gap-3 {
