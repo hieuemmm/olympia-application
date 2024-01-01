@@ -5,3 +5,8 @@
 .background-login-page {
     background-color: rgb(249 250 251/1);
 }
+
+/* SPACING CUSTOM */
+.ml-n10 {
+    margin-left: -10px;
+}
