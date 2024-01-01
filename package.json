@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "tailwind:css": "postcss public/styles/tailwind.css -o public/styles/style.css"
+    "build": "postcss public/styles/tailwind.css -o public/styles/style.css --watch"
   },
   "author": "ns",
   "license": "ISC",
@@ -15,8 +15,10 @@
     "body-parser": "^1.19.0",
     "dotenv": "^16.3.1",
     "express": "^4.17.1",
-    "firebase": "^7.14.2",
+    "express-session": "^1.17.3",
     "hbs": "^4.2.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth2": "^0.2.0",
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
     "socket.io": "^4.7.2",

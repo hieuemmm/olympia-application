@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-login-page {
+    background-color: rgb(249 250 251/1);
+}
