@@ -1,0 +1,51 @@
+.w-16pt {
+  width: 16.66666666666666%;
+}
+.w-20pt {
+  width: 20%;
+}
+.w-25pt {
+  width: 20%;
+}
+.w-33pt {
+  width: 33.33333333333333%;
+}
+.w-50pt {
+  width: 50%;
+}
+/* TABLET CSS RULES: */
+@media (max-width: 992px) {
+  .md\:w-16pt {
+    width: 16.66666666666666%;
+  }
+  .md\:w-20pt {
+    width: 20%;
+  }
+  .md\:w-25pt {
+    width: 20%;
+  }
+  .md\:w-33pt {
+    width: 33.33333333333333%;
+  }
+  .md\:w-50pt {
+    width: 50%;
+  }
+}
+/* MOBILE CSS RULES: */
+@media (max-width: 768px) {
+  .sm\:w-16pt {
+    width: 16.66666666666666%;
+  }
+  .sm\:w-20pt {
+    width: 20%;
+  }
+  .sm\:w-25pt {
+    width: 20%;
+  }
+  .sm\:w-33pt {
+    width: 33.33333333333333%;
+  }
+  .sm\:w-50pt {
+    width: 50%;
+  }
+}
