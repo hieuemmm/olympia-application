@@ -1,51 +1,51 @@
-.w-16pt {
+.col-16 {
   width: 16.66666666666666%;
 }
-.w-20pt {
+.col-20 {
   width: 20%;
 }
-.w-25pt {
+.col-25 {
   width: 20%;
 }
-.w-33pt {
+.col-33 {
   width: 33.33333333333333%;
 }
-.w-50pt {
+.col-50 {
   width: 50%;
 }
 /* TABLET CSS RULES: */
 @media (max-width: 992px) {
-  .md\:w-16pt {
+  .md\:col-16 {
     width: 16.66666666666666%;
   }
-  .md\:w-20pt {
+  .md\:col-20 {
     width: 20%;
   }
-  .md\:w-25pt {
+  .md\:col-25 {
     width: 20%;
   }
-  .md\:w-33pt {
+  .md\:col-33 {
     width: 33.33333333333333%;
   }
-  .md\:w-50pt {
+  .md\:col-50 {
     width: 50%;
   }
 }
 /* MOBILE CSS RULES: */
 @media (max-width: 768px) {
-  .sm\:w-16pt {
+  .sm\:col-16 {
     width: 16.66666666666666%;
   }
-  .sm\:w-20pt {
+  .sm\:col-20 {
     width: 20%;
   }
-  .sm\:w-25pt {
+  .sm\:col-25 {
     width: 20%;
   }
-  .sm\:w-33pt {
+  .sm\:col-33 {
     width: 33.33333333333333%;
   }
-  .sm\:w-50pt {
+  .sm\:col-50 {
     width: 50%;
   }
 }
