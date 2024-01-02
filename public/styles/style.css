@@ -26,6 +26,7 @@
 @import "./spacing.css"; /* Using a string */
 @import "./fontweight.css"; /* Using a string */
 @import "./cloumn.css"; /* Using a string */
+@import "./common.css"; /* Using a string */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Quicksand&display=swap");
 * {
   margin: 0;

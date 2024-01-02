@@ -1,0 +1,15 @@
+.max-w-screen-session {
+  max-width: 1342px;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  width: 100%;
+}
+.w-full-vw {
+  width: 100vw;
+}
+.h-full-vh {
+  width: 100vh;
+}
