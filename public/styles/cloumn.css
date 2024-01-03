@@ -13,6 +13,9 @@
 .col-50 {
   width: 50%;
 }
+.col-100 {
+  width: 100%;
+}
 /* TABLET CSS RULES: */
 @media (max-width: 992px) {
   .md\:col-16 {
@@ -29,6 +32,9 @@
   }
   .md\:col-50 {
     width: 50%;
+  }
+  .md\:col-100 {
+    width: 100%;
   }
 }
 /* MOBILE CSS RULES: */
@@ -47,5 +53,8 @@
   }
   .sm\:col-50 {
     width: 50%;
+  }
+  .sm\:col-100 {
+    width: 100%;
   }
 }

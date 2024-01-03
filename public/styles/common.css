@@ -13,3 +13,15 @@
 .h-full-vh {
   width: 100vh;
 }
+.background-linear-gradient-primary {
+  background: linear-gradient(#8854c0 0%, #ededed 100%);
+}
+.box-shadow {
+  box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
+}
+/* MOBILE CSS RULES: */
+@media (max-width: 768px) {
+  .sm\:w-full {
+    width: 100%;
+  }
+}
