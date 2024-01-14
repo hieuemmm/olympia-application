@@ -14,8 +14,10 @@
   --color-primary: rgb(136, 84, 192);
   --color-blue: rgb(45, 112, 174);
   --color-light-blue: rgb(32, 150, 243);
-  --color-green: rgb(0, 105, 92);
-  --color-light-green: rgba(0, 201, 133);
+  --color-dark-green: rgb(0, 105, 92);
+  --color-green: rgb(0, 201, 133);
+  --color-keppel: rgb(45, 157, 166);
+  --color-light-green: rgb(185, 246, 202);
   --color-yellow: rgb(239, 169, 41);
   --color-light-primary: rgb(237, 230, 246);
   --color-dark-primary: rgb(103, 58, 183);
@@ -58,6 +60,11 @@
   background-color: var(--color-light-blue);
 }
 
+.bg-dark-green,
+.background-color-dark-green {
+  background-color: var(--color-dark-green);
+}
+
 .bg-green,
 .background-color-green {
   background-color: var(--color-green);
@@ -67,7 +74,10 @@
 .background-color-light-green {
   background-color: var(--color-light-green);
 }
-
+.bg-keppel,
+.background-color-keppel {
+  background-color: var(--color-keppel);
+}
 .bg-yellow,
 .background-color-yellow {
   background-color: var(--color-yellow);
@@ -127,6 +137,11 @@
   color: var(--color-light-blue);
 }
 
+.t-dark-green,
+.text-dark-green {
+  color: var(--color-dark-green);
+}
+
 .t-green,
 .text-green {
   color: var(--color-green);
@@ -136,7 +151,10 @@
 .text-light-green {
   color: var(--color-light-green);
 }
-
+.t-keppel,
+.text-keppel {
+  color: var(--color-keppel);
+}
 .t-yellow,
 .text-yellow {
   color: var(--color-yellow);
@@ -201,6 +219,11 @@
   border: 1px solid var(--color-light-blue);
 }
 
+.b-dark-green,
+.border-dark-green {
+  border: 1px solid var(--color-dark-green);
+}
+
 .b-green,
 .border-green {
   border: 1px solid var(--color-green);
@@ -210,7 +233,10 @@
 .border-light-green {
   border: 1px solid var(--color-light-green);
 }
-
+.b-keppel,
+.border-keppel {
+  border: 1px solid var(--color-keppel);
+}
 .b-yellow,
 .border-yellow {
   border: 1px solid var(--color-yellow);
@@ -270,6 +296,11 @@
   border-top: 1px solid var(--color-light-blue);
 }
 
+.bt-dark-green,
+.border-top-dark-green {
+  border-top: 1px solid var(--color-dark-green);
+}
+
 .bt-green,
 .border-top-green {
   border-top: 1px solid var(--color-green);
@@ -278,6 +309,10 @@
 .bt-light-green,
 .border-top-light-green {
   border-top: 1px solid var(--color-light-green);
+}
+.bt-keppel,
+.border-top-keppel {
+  border-top: 1px solid var(--color-keppel);
 }
 
 .bt-yellow,
@@ -339,6 +374,11 @@
   border-left: 1px solid var(--color-light-blue);
 }
 
+.bl-dark-green,
+.border-left-dark-green {
+  border-left: 1px solid var(--color-dark-green);
+}
+
 .bl-green,
 .border-left-green {
   border-left: 1px solid var(--color-green);
@@ -348,10 +388,21 @@
 .border-left-light-green {
   border-left: 1px solid var(--color-light-green);
 }
+.bl-keppel,
+.border-left-keppel {
+  border-left: 1px solid var(--color-keppel);
+}
 
 .bl-yellow,
 .border-left-yellow {
   border-left: 1px solid var(--color-yellow);
+}
+/* border-left-yellow-10 */
+.bl-yellow-10 {
+  border-left: 10px solid var(--color-yellow);
+}
+.bl-green-5 {
+  border-left: 5px solid var(--color-green);
 }
 
 .bl-light-primary,
@@ -408,6 +459,11 @@
   border-bottom: 1px solid var(--color-light-blue);
 }
 
+.bb-dark-green,
+.border-bottom-dark-green {
+  border-bottom: 1px solid var(--color-dark-green);
+}
+
 .bb-green,
 .border-bottom-green {
   border-bottom: 1px solid var(--color-green);
@@ -417,7 +473,10 @@
 .border-bottom-light-green {
   border-bottom: 1px solid var(--color-light-green);
 }
-
+.bb-keppel,
+.border-bottom-keppel {
+  border-bottom: 1px solid var(--color-keppel);
+}
 .bb-yellow,
 .border-bottom-yellow {
   border-bottom: 1px solid var(--color-yellow);
@@ -477,6 +536,11 @@
   border-right: 1px solid var(--color-light-blue);
 }
 
+.br-dark-green,
+.border-right-dark-green {
+  border-right: 1px solid var(--color-dark-green);
+}
+
 .br-green,
 .border-right-green {
   border-right: 1px solid var(--color-green);
@@ -486,7 +550,10 @@
 .border-right-light-green {
   border-right: 1px solid var(--color-light-green);
 }
-
+.br-keppel,
+.border-right-keppel {
+  border-right: 1px solid var(--color-keppel);
+}
 .br-yellow,
 .border-right-yellow {
   border-right: 1px solid var(--color-yellow);

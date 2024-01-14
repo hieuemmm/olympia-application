@@ -28,6 +28,7 @@
 @import "./footer.css"; /* Using a string */
 @import "./cloumn.css"; /* Using a string */
 @import "./common.css"; /* Using a string */
+@import "./boderSize.css"; /* Using a string */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Quicksand&display=swap");
 * {
   margin: 0;
@@ -146,6 +147,9 @@ img {
   -webkit-box-align: initial;
   -ms-flex-align: initial;
   align-items: initial;
+}
+.text-center {
+  text-align: center;
 }
 /* =========================================================================== */
 /*! Position - Absolute */
@@ -627,6 +631,41 @@ img {
   .md\:font-size-40 {
     font-size: 40px;
   }
+  /* Tablet - center */
+  .md\:text-center {
+    text-align: center;
+  }
+  .md\:justify-center {
+    justify-content: center;
+  }
+  .md\:align-center {
+    align-items: center;
+  }
+  .md\:text-start {
+    text-align: start;
+  }
+  .md\:justify-start {
+    justify-content: start;
+  }
+  .md\:align-start {
+    align-items: start;
+  }
+  .md\:text-end {
+    text-align: end;
+  }
+  .md\:justify-end {
+    justify-content: end;
+  }
+  .md\:align-end {
+    align-items: end;
+  }
+
+  .md\:flex-column {
+    flex-direction: column;
+  }
+  .md\:flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
 }
 /* MOBILE CSS RULES: */
 @media (max-width: 768px) {
@@ -763,5 +802,33 @@ img {
   .sm\:fs-40,
   .sm\:font-size-40 {
     font-size: 40px;
+  }
+
+  .sm\:text-center {
+    text-align: center;
+  }
+  .sm\:justify-center {
+    justify-content: center;
+  }
+  .sm\:align-center {
+    align-items: center;
+  }
+  .sm\:text-start {
+    text-align: start;
+  }
+  .sm\:justify-start {
+    justify-content: start;
+  }
+  .sm\:align-start {
+    align-items: start;
+  }
+  .sm\:text-end {
+    text-align: end;
+  }
+  .sm\:justify-end {
+    justify-content: end;
+  }
+  .sm\:align-end {
+    align-items: end;
   }
 }
