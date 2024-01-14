@@ -28,7 +28,7 @@
           class="bg-light-primary text-primary px-20 py-10 fw-700 cursor-pointer"
         >Chương trình của tôi
         </div>
-        {{! <div
+        <div
           class="display-flex items-center justify-center h-40 w-40 cursor-pointer bg-gray rounded position-relative"
         >
           <i class="fa-solid fa-bars"></i>
@@ -47,23 +47,23 @@
               </a>
             </li>
           </ul>
-        </div> }}
+        </div>
       </nav>
     </header>
 
-    <main class="display-flex justify-center">
+    <main class="display-flex justify-center bg-light-gray mt-10">
       <div
         class="max-w-screen-session display-flex flex-column gap-10 w-full px-10"
       >
         <section
-          class="display-flex justify-between rounded border-gray px-20 py-10"
+          class="display-flex justify-between rounded border-gray px-20 py-10 flex-wrap gap-10"
         >
           <div>
             <p class="fw-700">Bạn muốn tạo và tổ chức một Olympia?</p>
             <p>Bạn có thể bắt đầu dùng miễn phí.</p>
           </div>
           <div
-            class="bg-light-primary text-primary px-20 py-10 fw-700 cursor-pointer"
+            class="bg-light-primary text-primary px-20 py-10 fw-700 cursor-pointer sm:col-100"
           >
             <i class="fa-solid fa-plus"></i>
             <span>Tổ chức ngay</span>
@@ -89,7 +89,7 @@
               </div>
               <div class="display-flex gap-10 items-center flex-wrap">
                 <input
-                  class="flex-1 px-15 py-10 border-gray rounded min-w-230"
+                  class="flex-1 px-15 py-10 border-gray rounded"
                   type="text"
                   placeholder="Nhập mã tham gia vào đây..."
                 />
@@ -114,27 +114,29 @@
           </div>
         </section>
         <section>
-          <div class="display-flex justify-between items-center">
+          <div class="display-flex justify-between items-center py-15">
             <div class="display-flex">
               <h1 class="fs-16 fw-700">Past Activities</h1>
             </div>
-            <div class="display-flex items-center gap-5">
-              <h1 class="fs-16 fw-700">View all</h1>
-              <i class="fa-solid fa-chevron-right"></i>
+            <div class="">
+              <a href="#" class="display-flex items-center gap-10">
+                <h1 class="fs-16 fw-700">View all</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
             </div>
           </div>
-          <div class="display-flex gap-5">
-
-            <div class="card flex-1 b-primary">
+          <div class="display-flex gap-10 flex-wrap justify-between py-20">
+            <div
+              class="card flex-1 col-25 md:col-50 sm:col-100 rounded bg-white p-3"
+            >
               <div
                 class="bg-blue m-5 display-flex justify-center items-center"
                 style="border-radius: 5px 5px 30px 5px;height:160px"
               >
-                <img src="./images/Q.svg" alt="" />
+                <img src="./images/quiz.svg" alt="" />
               </div>
               <div
-                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 t-green rounded"
-                style="border-left:5px solid rgb(0,201,133);background-color:#B9F6CA;"
+                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 bg-light-green rounded bl-green-5 t-green"
               >
                 <i class="fa-solid fa-list-check"></i>
                 <p>Assigned</p>
@@ -142,29 +144,29 @@
               <div class="py-5 ml-10">
                 <h1 class="fs-16 fw-700">ReactJS</h1>
               </div>
-              <div class="py-5 ml-10 fs-14">
+              <div class="py-6 ml-10 fs-14">
                 <span>Quiz</span>
                 •
                 <span>50 Questions</span>
               </div>
-              <div class="display-flex items-center py-5 ml-10 gap-10 fs-14">
-                <i
-                  class="fa-solid fa-circle-check fa-xl"
-                  style="color: rgb(0,201,133); "
-                ></i>
-                <div class="t-green">Completed with 89% accuracy</div>
+              <div
+                class="display-flex items-center py-5 ml-10 gap-10 fs-14 t-green"
+              >
+                <i class="fa-solid fa-circle-check fa-xl"></i>
+                <div>Completed with 89% accuracy</div>
               </div>
             </div>
-            <div class="card flex-1 b-primary">
+            <div
+              class="card flex-1 col-25 md:col-50 sm:col-100 rounded bg-white p-3"
+            >
               <div
-                class="bg-light-green m-5 display-flex justify-center items-center"
+                class="bg-keppel m-5 display-flex justify-center items-center"
                 style="border-radius: 5px 5px 30px 5px;height:160px"
               >
-                <img src="./images/Q.svg" alt="" />
+                <img src="./images/quiz.svg" alt="" />
               </div>
               <div
-                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 t-green rounded"
-                style="border-radius: 4px; border-left:5px solid rgb(0,201,133);background-color:#B9F6CA;"
+                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 bg-light-green rounded bl-green-5 t-green"
               >
                 <i class="fa-solid fa-list-check"></i>
                 <p>Assigned</p>
@@ -172,30 +174,30 @@
               <div class="py-5 ml-10">
                 <h1 class="fs-16 fw-700">ReactJS</h1>
               </div>
-              <div class="py-5 ml-10 fs-14">
+              <div class="py-6 ml-10 fs-14">
                 <span>Quiz</span>
                 •
                 <span>50 Questions</span>
               </div>
-              <div class="display-flex items-center py-5 ml-10 gap-10 fs-14">
-                <i
-                  class="fa-solid fa-circle-check fa-xl"
-                  style="color: rgb(0,201,133); "
-                ></i>
-                <div class="t-green">Completed with 89% accuracy</div>
+              <div
+                class="display-flex items-center py-5 ml-10 gap-10 fs-14 t-green"
+              >
+                <i class="fa-solid fa-circle-check fa-xl"></i>
+                <div>Completed with 89% accuracy</div>
               </div>
             </div>
-            <div class="card flex-1 b-primary">
+            <div
+              class="card flex-1 col-25 md:col-50 sm:col-100 rounded bg-white p-3"
+            >
               <div
                 class="bg-yellow m-5 display-flex justify-center items-center"
                 style="border-radius: 5px 5px 30px 5px;height:160px"
               >
-                <img src="./images/Q.svg" alt="" />
+                <img src="./images/quiz.svg" alt="" />
 
               </div>
               <div
-                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 t-green rounded"
-                style="border-radius: 4px; border-left:5px solid rgb(0,201,133);background-color:#B9F6CA;"
+                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 bg-light-green rounded bl-green-5 t-green"
               >
                 <i class="fa-solid fa-list-check"></i>
                 <p>Assigned</p>
@@ -203,29 +205,29 @@
               <div class="py-5 ml-10">
                 <h1 class="fs-16 fw-700">ReactJS</h1>
               </div>
-              <div class="py-5 ml-10 fs-14">
+              <div class="py-6 ml-10 fs-14">
                 <span>Quiz</span>
                 •
                 <span>50 Questions</span>
               </div>
-              <div class="display-flex items-center py-5 ml-10 gap-10 fs-14">
-                <i
-                  class="fa-solid fa-circle-check fa-xl"
-                  style="color: rgb(0,201,133); "
-                ></i>
-                <div class="t-green">Completed with 89% accuracy</div>
+              <div
+                class="display-flex items-center py-8 ml-10 gap-10 fs-14 t-green"
+              >
+                <i class="fa-solid fa-circle-check fa-xl"></i>
+                <div>Completed with 89% accuracy</div>
               </div>
             </div>
-            <div class="card flex-1 b-primary">
+            <div
+              class="card flex-1 col-25 md:col-50 sm:col-100 rounded bg-white p-3"
+            >
               <div
                 class="bg-red m-5 display-flex justify-center items-center"
                 style="border-radius: 5px 5px 30px 5px;height:160px"
               >
-                <img src="./images/Q.svg" alt="" />
+                <img src="./images/quiz.svg" alt="" />
               </div>
               <div
-                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 t-green rounded"
-                style="border-radius: 4px; border-left:5px solid rgb(0,201,133);background-color:#B9F6CA;"
+                class="display-flex p-5 items-center gap-5 ml-10 w-100 my-15 bg-light-green rounded bl-green-5 t-green"
               >
                 <i class="fa-solid fa-list-check"></i>
                 <p>Assigned</p>
@@ -233,49 +235,88 @@
               <div class="py-5 ml-10">
                 <h1 class="fs-16 fw-700">ReactJS</h1>
               </div>
-              <div class="py-5 ml-10 fs-14">
+              <div class="py-6 ml-10 fs-14">
                 <span>Quiz</span>
                 •
                 <span>50 Questions</span>
               </div>
-              <div class="display-flex items-center py-10 ml-10 gap-10 fs-14">
-                <i
-                  class="fa-solid fa-circle-check fa-xl"
-                  style="color: rgb(0,201,133); "
-                ></i>
-                <div class="t-green">Completed with 89% accuracy</div>
+              <div
+                class="display-flex items-center py-8 ml-10 gap-10 fs-14 t-green"
+              >
+                <i class="fa-solid fa-circle-check fa-xl"></i>
+                <div>Completed with 89% accuracy</div>
               </div>
             </div>
-
           </div>
+        </section>
+
+        <section>
+          <div class="display-flex justify-between items-center py-15">
+            <div class="display-flex">
+              <h1 class="fs-16 fw-700">Groups</h1>
+            </div>
+            <div class="">
+              <a href="#" class="display-flex items-center gap-10">
+                <h1 class="fs-16 fw-700">View all</h1>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="card display-flex flex-column rounded bl-yellow-10 p-20 gap-5 col-50"
+          >
+            <p class="fs-16 fw-700">OS_04</p>
+            <p class="fs-16">By FA_DN</p></div>
+          <div
+            class="card display-flex flex-column flex-rounded bl-yellow-10 p-20 gap-5 col-50"
+          >
+            <p class="fs-16 fw-700">OS_04</p>
+            <p class="fs-16">By FA_DN</p></div>
         </section>
       </div>
     </main>
 
-    <footer class="p-24">
-      <div class="display-flex flex-wrap gap-15 m-50">
-        <div class="flex-1 p-5 md:flex-4">
-          <h1 class="fs-16 fw-700">Solutions</h1>
-          <p class="line-height-30 fs-16 fw-500">Employee training</p>
-          <p class="line-height-30 fs-16 fw-500">Customer engagement</p>
-          <p class="line-height-30 fs-16 fw-500">Presentations</p>
+    <footer class="display-flex justify-center flex-column items-center mx-10">
+      <div
+        class="display-flex flex-wrap gap-15 m-50 max-w-screen-session w-full"
+      >
+        <div
+          class="display-flex col-25 md:col-100 md:justify-center md:align-center md:text-center sm:col-100 p-5 sm:display-flex sm:justify-center sm:align-center sm:text-center"
+        >
+          <div>
+            <h1 class="fs-16 fw-700">Solutions</h1>
+            <p class="line-height-30 fs-16 fw-500">Employee training</p>
+            <p class="line-height-30 fs-16 fw-500">Customer engagement</p>
+            <p class="line-height-30 fs-16 fw-500">Presentations</p>
+          </div>
         </div>
-        <div class="flex-1 p-5 md:flex-4">
-          <h1 class="fs-16 fw-700">Solutions</h1>
-          <p class="line-height-30 fs-16 fw-500">Employee training</p>
-          <p class="line-height-30 fs-16 fw-500">Customer engagement</p>
-          <p class="line-height-30 fs-16 fw-500">Presentations</p>
+        <div
+          class="display-flex col-25 p-5 md:col-50 md:justify-start md:text-start sm:col-50 sm:justify-start sm:text-start"
+        >
+          <div>
+            <h1 class="fs-16 fw-700">Support</h1>
+            <p class="line-height-30 fs-16 fw-500">FAQ</p>
+            <p class="line-height-30 fs-16 fw-500">Create a Quiz</p>
+            <p class="line-height-30 fs-16 fw-500">Create a Presentation</p>
+            <p class="line-height-30 fs-16 fw-500">Host a Quiz</p>
+          </div>
         </div>
-        <div class="flex-1 p-5 md:flex-4">
-          <h1 class="fs-16 fw-700">Solutions</h1>
-          <p class="line-height-30 fs-16 fw-500">Employee training</p>
-          <p class="line-height-30 fs-16 fw-500">Customer engagement</p>
-          <p class="line-height-30 fs-16 fw-500">Presentations</p>
+        <div
+          class="display-flex col-25 p-5 md:col-50 md:justify-end md:text-end sm:col-50 sm:justify-end sm:text-end"
+        >
+          <div>
+            <h1 class="fs-16 fw-700">Solutions</h1>
+            <p class="line-height-30 fs-16 fw-500">Employee training</p>
+            <p class="line-height-30 fs-16 fw-500">Customer engagement</p>
+            <p class="line-height-30 fs-16 fw-500">Presentations</p>
+          </div>
         </div>
-        <div class="flex-1 p-5 md:flex-4"></div>
+        <div class="col-25 md:col-50 sm:col-100 p-5"></div>
       </div>
-      <div class="display-flex gap-15 mx-50 mt-25 justify-between items-center">
-        <div class="display-flex">
+      <div
+        class="bt-gray display-flex gap-15 items-center justify-between max-w-screen-session md:flex-wrap-reverse py-25 w-full"
+      >
+        <div class="display-flex ml-5 items-center">
           <ul class="display-flex ml-5 items-center">
             <li>
               <p class="fw-700">&copy; 2022 Olympia Application. All rights
@@ -295,7 +336,7 @@
             </li>
           </ul>
         </div>
-        <div class="display-flex">
+        <div class="display-flex justify-end md:justify-center w-full">
           <ul class="display-flex ml-5 items-center">
             <li class="m-5">
               <p class="fw-700">Get our app</p>
@@ -320,6 +361,7 @@
             </li>
           </ul>
         </div>
+
       </div>
     </footer>
   </body>

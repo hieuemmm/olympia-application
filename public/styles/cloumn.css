@@ -1,60 +1,60 @@
 .col-16 {
-  width: 16.66666666666666%;
+  min-width: 15.66666666666666%;
 }
 .col-20 {
-  width: 20%;
+  min-width: 19%;
 }
 .col-25 {
-  width: 20%;
+  min-width: 24%;
 }
 .col-33 {
-  width: 33.33333333333333%;
+  min-width: 32.33333333333333%;
 }
 .col-50 {
-  width: 50%;
+  min-width: 49%;
 }
 .col-100 {
-  width: 100%;
+  min-width: 99%;
 }
 /* TABLET CSS RULES: */
 @media (max-width: 992px) {
   .md\:col-16 {
-    width: 16.66666666666666%;
+    min-width: 15.66666666666666%;
   }
   .md\:col-20 {
-    width: 20%;
+    min-width: 19%;
   }
   .md\:col-25 {
-    width: 20%;
+    min-width: 24%;
   }
   .md\:col-33 {
-    width: 33.33333333333333%;
+    min-width: 32.33333333333333%;
   }
   .md\:col-50 {
-    width: 50%;
+    min-width: 48%;
   }
   .md\:col-100 {
-    width: 100%;
+    min-width: 99%;
   }
 }
 /* MOBILE CSS RULES: */
 @media (max-width: 768px) {
   .sm\:col-16 {
-    width: 16.66666666666666%;
+    min-width: 15.66666666666666%;
   }
   .sm\:col-20 {
-    width: 20%;
+    min-width: 19%;
   }
   .sm\:col-25 {
-    width: 20%;
+    min-width: 25%;
   }
   .sm\:col-33 {
-    width: 33.33333333333333%;
+    min-width: 32.33333333333333%;
   }
   .sm\:col-50 {
-    width: 50%;
+    min-width: 48%;
   }
   .sm\:col-100 {
-    width: 100%;
+    min-width: 99%;
   }
 }

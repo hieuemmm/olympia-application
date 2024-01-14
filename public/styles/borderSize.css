@@ -1,0 +1,30 @@
+.b-1 {
+  border: 1px;
+}
+.b-2 {
+  border: 2px;
+}
+.b-3 {
+  border: 3px;
+}
+.b-4 {
+  border: 4px;
+}
+.b-5 {
+  border: 5px;
+}
+.br-1 {
+  border-radius: 1px;
+}
+.br-2 {
+  border-radius: 2px;
+}
+.br-3 {
+  border-radius: 3px;
+}
+.br-4 {
+  border-radius: 4px;
+}
+.br-5 {
+  border-radius: 5px;
+}
