@@ -1,0 +1,57 @@
+{{! For Login Google }}
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<header
+  class="h-64 display-flex justify-between items-center px-10 bg-white border-bottom-gray"
+>
+  <h1 class="py-1 display-flex items-center cursor-pointer">
+    <a class="text-primary fs-27 display-block sm:display-none" href="/">Olympia
+      Application</a>
+  </h1>
+  <nav class="display-flex gap-4 items-center gap-5">
+    <div
+      class="bg-light-primary text-primary px-20 py-10 fw-700 cursor-pointer"
+    >Chương trình của tôi
+    </div>
+    {{#if user}}
+      {{! MENU BUTTON  #partials-header-menu}}
+      <div
+        id="partials-header-menu"
+        class="display-flex items-center justify-center h-40 w-40 cursor-pointer bg-gray rounded position-relative"
+      >
+        <i class="fa-solid fa-bars pointer-events-none"></i>
+        <ul
+          data-id="partials-header-menu-list"
+          class="display-none absolute-right bg-white border-gray min-w-200 position-absolute top-43 py-10 rounded shadow"
+        >
+          <li class="px-20">
+            <div class="fs-14 lh-20">{{user.displayName}}</div>
+            <div class="fs-12 lh-20">{{user.email}}</div>
+          </li>
+          <li class="h-1 bb-gray my-10" />
+          {{! LOGOUT BUTTON #button-logout}}
+          <li class="cursor-pointer px-20 py-10 hover:light-primary">
+            <a class="display-flex gap-10 items-center" id="button-logout">
+              <i class="fa-solid fa-right-to-bracket text-black"></i>
+              <span class="text-black">Đăng xuất</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    {{else}}
+      {{! LOGIN BUTTON  #button-login}}
+      <div
+        id="button-login"
+        class="display-flex items-center justify-center h-40 px-20 gap-3 cursor-pointer bg-gray rounded position-relative"
+      >
+        <img
+          class="h-20 w-20"
+          src="./images/google-icon.svg"
+          alt="google-icon.svg"
+        />
+        Đăng nhập
+      </div>
+    {{/if}}
+  </nav>
+</header>
+<script src="/script/partials/header.js"></script>

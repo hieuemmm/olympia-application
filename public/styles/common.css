@@ -34,6 +34,9 @@
 .img-cover {
   object-fit: cover;
 }
+.pointer-events-none {
+  pointer-events: none;
+}
 .checkbox-round label {
   background-color: #fff;
   border: 1px solid #ccc;
