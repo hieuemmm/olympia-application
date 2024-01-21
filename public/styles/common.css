@@ -19,6 +19,10 @@
 .box-shadow {
   box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
 }
+.box-shadow-1 {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
 .text-shadow {
   text-shadow: 0 0 1px #000;
 }
@@ -74,6 +78,22 @@
 
 .checkbox-round input[type="checkbox"]:checked + label:after {
   opacity: 1;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 0;
+}
+/* Response job-list-item*/
+@media only screen and (max-width: 500px) {
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
 }
 /* TABLET CSS RULES: */
 @media (max-width: 992px) {
