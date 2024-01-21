@@ -1,35 +1,45 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
+const handlebars = require("express-handlebars");
 const http = require("http");
 const bodyParser = require("body-parser");
-const session = require('express-session');
-const passport = require('passport');
-const path = require('path');
-const viewsPath = path.join(__dirname, "views")
-const staticFilePath = path.join(__dirname, 'public');
+const session = require("express-session"); //For Login
+const passport = require("passport");
+const path = require("path");
+const viewsPath = path.join(__dirname, "views");
+const staticFilePath = path.join(__dirname, "public");
+const routes = require("./routes");
 
 //=========================================
 const app = express();
 const server = http.createServer(app);
 
-// Middlewares
-app.set('views', viewsPath);
+// Template Engine
+app.engine(
+  "hbs",
+  handlebars({
+    extname: ".hbs",
+    defaultLayout: "main",
+    layoutsDir: path.join(__dirname, "views/layouts"),
+  })
+);
 app.set("view engine", "hbs");
-app.use(express.static(staticFilePath))
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(session({ secret: 'cats', resave: false, saveUninitialized: true })); //For Login
+app.set("views", viewsPath);
+
+// Static Files
+app.use(express.static(staticFilePath));
+
+// Middlewares
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//For Login
+app.use(session({ secret: "cats", resave: false, saveUninitialized: true })); //For Login
 app.use(passport.initialize()); //For Login
 app.use(passport.session()); //For Login
 
-
-// Routes
-// Import the router modules
-const authRoutes = require("./routes/authRoutes");
-const clientRoutes = require("./routes/clientRoutes");
-
-// Use the router modules
-app.use("/", clientRoutes);
-app.use("/auth", authRoutes);
+// Routes initialize
+routes(app);
 
 // Starting a server
 server.listen(3000, () => {
