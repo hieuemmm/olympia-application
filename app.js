@@ -9,6 +9,7 @@ const path = require("path");
 const viewsPath = path.join(__dirname, "views");
 const staticFilePath = path.join(__dirname, "public");
 const routes = require("./routes");
+require("./services/googleAuthService");
 
 //=========================================
 const app = express();
