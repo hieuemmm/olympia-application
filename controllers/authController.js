@@ -1,5 +1,4 @@
 const passport = require("passport");
-require("../services/googleAuthService");
 class AuthController {
   // [GET] /auth/logout
   logout = (req, res) => {
