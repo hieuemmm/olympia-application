@@ -684,6 +684,9 @@ img {
 }
 /* MOBILE CSS RULES: */
 @media (max-width: 768px) {
+  .sm\:display-inline {
+    display: inline;
+  }
   .sm\:display-block {
     display: block;
   }

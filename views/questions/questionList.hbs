@@ -1,2 +1,639 @@
 <h1>questionList</h1>
-<a href="/question/addSingleQuestion">GO TO Add Single Question</a>
+<main class="display-flex justify-center pt-10">
+  <div
+    class="max-w-screen-session display-flex flex-column gap-10 w-full px-10"
+  >
+    {{! SESSION--QUESTION TABS COMPONENT }}
+    <session
+      class="h-50 bg-white border-gray rounded display-flex items-center"
+    >
+      <div class="pt-10 cursor-pointer">
+        <span class="display-block px-20">Khởi động</span>
+        <div class="display-none w-full h-2 bg-dark-primary mt-5"></div>
+      </div>
+      <div class="pt-10 cursor-pointer">
+        <span class="display-block px-20">Vượt chướng ngại vật</span>
+        <div class="display-none w-full h-2 bg-dark-primary mt-5"></div>
+      </div>
+      <div class="pt-10 cursor-pointer">
+        <span class="display-block px-20">Tăng tốc</span>
+        <div class="w-full h-2 bg-dark-primary mt-5"></div>
+      </div>
+      <div class="pt-10 cursor-pointer">
+        <span class="display-block px-20">Về đích</span>
+        <div class="display-none w-full h-2 bg-dark-primary mt-5"></div>
+      </div>
+      <div class="pt-10 cursor-pointer">
+        <span>về đích phụ</span>
+        <div class="display-none w-full h-2 bg-dark-primary mt-5"></div>
+      </div>
+    </session>
+    {{! SESSION--ADMINISTRATOR APPROVAL }}
+    <session
+      class="bg-white border-primary bg-light-primary-opacity rounded display-flex items-center justify-between p-16 flex-wrap-reverse gap-10"
+    >
+      <div class="md:col-100">
+        <div class="fs-16 fw-700">Số câu hỏi cần quản trị viên xét duyệt</div>
+        <div class="fs-12 fw-400 mt-5">Mỗi câu hỏi do thành viên tạo ra phải
+          được xét duyệt kỹ lưỡng trước khi đến người dùng cuối</div>
+      </div>
+      <div
+        class="md:col-100 bg-light-primary text-primary border-primary rounded px-20 py-10 fw-700 cursor-pointer md:text-center"
+      >
+        <i class="fas fa-bolt"></i>
+        <span>Xét duyệt câu hỏi</span>
+      </div>
+    </session>
+    {{! SESSION--ADMINISTRATOR APPROVAL }}
+    <session
+      class="bg-white border-gray rounded display-flex flex-column px-16 py-10 gap-10"
+    >
+      {{! Question overview and action buttons }}
+      <div class="display-flex justify-between flex-wrap gap-10">
+        {{! Question statistics }}
+        <div class="md:col-100">
+          <div class="fs-16 fw-700">Thống kê câu hỏi</div>
+          <div class="fs-12 fw-400 mt-5">Tổng số câu hỏi: 100</div>
+          <div class="fs-12 fw-400 mt-5">Câu hỏi đã được xét duyệt: 100</div>
+          <div class="fs-12 fw-400 mt-5">Câu hỏi chưa được xét duyệt: 100</div>
+        </div>
+        {{! Button add one or add more from excel file }}
+        <div
+          class="display-flex justify-start gap-10 md:flex-wrap-reverse md:col-100"
+        >
+          <div
+            class="h-42 bg-light-primary text-primary px-20 py-10 fw-700 cursor-pointer md:col-100 md:text-center position-relative"
+          >
+            <i class="fas fa-plus"></i>
+            <span>Thêm câu hỏi mới</span>
+            <a
+              class="position-absolute absolute-bottom absolute-left absolute-top absolute-right"
+              href="/question/addSingleQuestion"
+            ></a>
+          </div>
+          <div
+            class="h-42 bg-light-primary text-primary px-20 py-10 fw-700 cursor-pointer md:col-100 md:text-center"
+          >
+            <i class="fa-solid fa-plus"></i>
+            <span>Import Excel file</span>
+          </div>
+        </div>
+      </div>
+      {{! Question list }}
+      <div class="display-flex flex-column gap-10 mt-10">
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+        {{! Question item }}
+        <div class="rounded border-gray pb-20">
+          <div class="bg-light-gray h-50 display-flex items-center px-10">
+            {{! Question number information }}
+            <div class="display-flex gap-5 items-center">
+              <div
+                class="sm:display-none h-40 w-40 display-flex items-center justify-center border-primary rounded bg-light-primary"
+              >
+                <i class="fa-regular fa-square-check bg-white"></i>
+              </div>
+              <span class="display-none sm:display-inline">#</span>
+              <span>Câu hỏi số 1</span>
+            </div>
+            {{! Question action buttons }}
+            <div class="display-flex gap-10 flex-1 justify-end">
+              {{! Button edit question}}
+              <div
+                class="display-flex items-center justify-center h-40 px-20 gap-5 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-pen-to-square pointer-events-none"></i>
+                <span class="sm:display-none">Chỉnh sửa</span>
+              </div>
+              {{! Button duplicate question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-regular fa-copy pointer-events-none"></i>
+              </div>
+              {{! Button duplicate remove question}}
+              <div
+                class="display-flex items-center justify-center h-40 w-40 cursor-pointer border-gray rounded"
+              >
+                <i class="fa-solid fa-delete-left pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+          {{! Question sentence }}
+          <div class="p-20">
+            <p class="">What is the typical structure of a ca dao?</p>
+          </div>
+          <div class="px-20 my-10 h1 border-bottom-light-primary"></div>
+          {{! Answer list for question}}
+          <div class="px-20 display-flex flex-wrap gap-10">
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-regular fa-circle text-red"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+            <div
+              class="display-flex items-center gap-5 py-10 col-50 md-col-100"
+            >
+              <i class="fa-solid fa-circle text-green"></i>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </session>
+  </div>
+</main>
